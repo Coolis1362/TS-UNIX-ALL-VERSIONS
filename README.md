@@ -14,7 +14,7 @@ sudo dpkg -i ts-unix-<Version Number e.g. 1.0.0>.deb
 ts-unix --start
 ```
 
-# If You Wan tTo Uninstall The Package, Run The Following Command:
+# If You Want To Uninstall The Package, Run The Following Command:
 
 ```text
 sudo dpkg -r ts-unix
