@@ -1,0 +1,18 @@
+#!/bin/bash
+VERSION_NUMBER="1.0.0"
+
+if [[ "$1" == "--start" ]]; then
+    echo "Starting TS-UNIX $VERSION_NUMBER..."
+    clear
+    /usr/bin/ts-unix
+elif [[ "$1" == "--version" ]]; then
+    echo "TS-UNIX version $VERSION_NUMBER"
+elif [[ "$1" == "--help" ]]; then
+    echo "Usage: ts-unix [--start | --version | --help]"
+    echo "--start   Start the TS-UNIX application"
+    echo "--version Show the version number"
+    echo "--help    Show this help message"
+else
+    echo "The Offical ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for help."
+    exit 1
+fi
