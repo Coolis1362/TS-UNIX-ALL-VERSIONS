@@ -1,10 +1,19 @@
 #!/bin/bash
-VERSION_NUMBER="1.0.0"
+VERSION_NUMBER="1.0.0.1"
 
 if [[ "$1" == "--start" ]]; then
     if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
     echo "Error: TS-UNIX executable not found!"
     exit 1
+    elif [[ "$2" == "--clear" ]]; then
+        if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
+            echo "Error: TS-UNIX executable not found!"
+            exit 1
+        else
+            echo "Starting TS-UNIX $VERSION_NUMBER with clear option..."
+            /usr/bin/ts-unix-$VERSION_NUMBER
+            clear
+        fi
     else
         echo "Starting TS-UNIX $VERSION_NUMBER..."
         /usr/bin/ts-unix-$VERSION_NUMBER
