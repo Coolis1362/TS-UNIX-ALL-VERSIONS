@@ -2,12 +2,12 @@
 VERSION_NUMBER="1.0.0"
 
 if [[ "$1" == "--start" ]]; then
-    if [[ ! -x /usr/bin/ts-unix-1.0.0 ]]; then
+    if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
     echo "Error: TS-UNIX executable not found!"
     exit 1
     else
         echo "Starting TS-UNIX $VERSION_NUMBER..."
-        /usr/bin/ts-unix-1.0.0
+        /usr/bin/ts-unix-$VERSION_NUMBER
     fi
 elif [[ "$1" == "--version" ]]; then
     echo "TS-UNIX version $VERSION_NUMBER"
