@@ -25,6 +25,7 @@ elif [[ "$1" == "--help" ]]; then
     echo "--start   Start the TS-UNIX application"
     echo "--version Show the version number"
     echo "--help    Show this help message"
+    echo "      --clear  Clear the screen before starting"
 else
     echo "The Offical ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for help."
     exit 1
