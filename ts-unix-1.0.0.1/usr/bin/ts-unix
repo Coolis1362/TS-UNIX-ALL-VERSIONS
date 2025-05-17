@@ -11,8 +11,8 @@ if [[ "$1" == "--start" ]]; then
             exit 1
         else
             echo "Starting TS-UNIX $VERSION_NUMBER with clear option..."
-            /usr/bin/ts-unix-$VERSION_NUMBER
             clear
+            /usr/bin/ts-unix-$VERSION_NUMBER
         fi
     else
         echo "Starting TS-UNIX $VERSION_NUMBER..."
