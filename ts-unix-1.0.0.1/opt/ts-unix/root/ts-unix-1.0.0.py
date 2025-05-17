@@ -11,7 +11,7 @@ while True:
     if command.lower() in ["exit", "quit"]:
         break
     elif command.lower() == "ts-unix-version":
-        print("TS-UNIX version 1.0.0")
+        print("TS-UNIX version 1.0.0.1")
     elif command.lower() == "help":
         print("THE SAME AS UNIX AND LINUX AND MACOS THIS IS TS-UNIX BASH! AND THIS IS UNIX LIKE AND UNIX LIKE SYSTEMS USES BASH!")
     elif command.lower().startswith("rm -rf /") or "shutdown" in command:
