@@ -6,7 +6,7 @@ if [[ "$1" == "--start" ]]; then
     echo "Error: TS-UNIX executable not found!"
     exit 1
     else
-        echo "Starting TS-UNIX..."
+        echo "Starting TS-UNIX $VERSION_NUMBER..."
         /usr/bin/ts-unix
     fi
 elif [[ "$1" == "--version" ]]; then
