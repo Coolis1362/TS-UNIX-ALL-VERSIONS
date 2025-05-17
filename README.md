@@ -29,3 +29,11 @@ sudo dpkg --remove ts-unix
 They are the same command, just different ways of writing it.
 
 You May Name This Debain Package Installation 'TS-UNIX for Debian Setup' or 'TS-UNIX for Ubuntu Setup' or 'TS-UNIX for Debian-based Setup' or 'TS-UNIX for Ubuntu-based Setup' or something like that.
+
+# To Update The Package, Run The Following Command:
+
+```text
+sudo apt upgrade ts-unix
+```
+
+It Will Check For Updates For the ts-unix package and install them if available. (And Updates For Other Installed Packages If Any)
