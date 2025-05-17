@@ -1,0 +1,6 @@
+Package: ts-unix
+Version: 1.0.0
+Architecture: amd64
+Maintainer: Coolis1362 On GitHub <tadeotherocketbuilder@outlook.com> 
+Description: TS-UNIX Is A UNIX Like OS. All Rights Reserved
+Depends: bash, coreutils
