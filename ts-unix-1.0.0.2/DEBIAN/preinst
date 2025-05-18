@@ -1,17 +1,16 @@
 #!/bin/sh
 set -e
 
-PAST_VERSION_NUMBERS="1.0.0 1.0.0.1"
+PAST_VERSION_NUMBERS="1.0.0 1.0.0.1 1.0.0.2"
 
-echo "Preparing TS-UNIX installation..."
+echo "Stopping TS-UNIX services before removal..."
 
-# Stop any running old versions before installing
-systemctl stop ts-unix || true
 for version in $PAST_VERSION_NUMBERS; do
-    systemctl stop ts-unix-$version || true
+    if systemctl list-units --type=service --no-pager | grep -q "ts-unix-$version"; then
+        systemctl stop ts-unix-$version || true
+    else
+        echo "Skipping ts-unix-$version, service not found."
+    fi
 done
-
-# Ensure required dependencies are installed (optional)
-sudo apt-get install -y bash coreutils python3 || true
 
 exit 0
