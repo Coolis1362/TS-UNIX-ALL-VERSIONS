@@ -1,0 +1,13 @@
+echo "TS-UNIX INSTALLATION COMPLETE!"
+echo "Welcome to the TS-UNIX CLI!"
+echo ""
+echo "  ████████╗███████╗     ██╗   ██╗███╗   ██╗██╗██╗  ██╗  "
+echo "  ╚══██╔══╝██╔════╝     ██║   ██║████╗  ██║██║╚██╗██╔╝  "
+echo "     ██║   █████╗       ██║   ██║██╔██╗ ██║██║ ╚███╔╝   "
+echo "     ██║   ██╔══╝       ██║   ██║██║╚██╗██║██║ ██╔██╗   "
+echo "     ██║   ███████╗     ╚██████╔╝██║ ╚████║██║██╔╝ ██╗  "
+echo "     ╚═╝   ╚══════╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝  "
+echo ""
+echo "TS-UNIX is ready to roll!"
+echo "Now TS-UNIX Will Start"
+/usr/bin/ts-unix --start 
