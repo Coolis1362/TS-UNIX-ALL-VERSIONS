@@ -3,8 +3,8 @@ VERSION_NUMBER="1.0.0.1"
 
 if [[ "$1" == "--start" ]]; then
     if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
-    echo "Error: TS-UNIX executable not found!"
-    exit 1
+        echo "Error: TS-UNIX executable not found!"
+        exit 1
     else
         echo "Starting TS-UNIX $VERSION_NUMBER..."
         /usr/bin/ts-unix-$VERSION_NUMBER
@@ -12,20 +12,21 @@ if [[ "$1" == "--start" ]]; then
 elif [[ "$1" == "--version" ]]; then
     echo "TS-UNIX version $VERSION_NUMBER"
 elif [[ "$1" == "--help" ]]; then
-    echo "Usage: ts-unix [--start | --version | --help"
+    echo "Usage: ts-unix [--start | --version | --help]"
     echo "--start   Start the TS-UNIX application"
     echo "--version Show the version number"
     echo "--help    Show this help message"
-    echo "      --clear  Clear the screen before starting"
-elif [[ "$1" == "--start"]] && [[ "$2" == "--clear"]]; then
-    if [[ ! -x /usr/bin/ts-unix$VERSION_NUMBER]]; then
-     echo "Error: TS-UNIX executable not found!"
-     exit 1
+    echo "--clear   Clear the screen before starting"
+elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
+    if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
+        echo "Error: TS-UNIX executable not found!"
+        exit 1
     else
         clear
+        echo "Starting TS-UNIX $VERSION_NUMBER with a clean screen!"
         /usr/bin/ts-unix-$VERSION_NUMBER
     fi
 else
-    echo "The Offical ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for help."
+    echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
     exit 1
 fi
