@@ -46,10 +46,13 @@ elif [[ "$1" == "--remove" ]]; then
         sleep 1
         sudo dpkg -r ts-unix
         echo "TS-UNIX removed successfully!"
-    else
+    elif [[ $key == "n" || $key == "N" ]]; then
         echo "Using apt To Remove Instead of dpkg but Using dpkg Is Recommended!"
         sleep 1
         sudo apt remove ts-unix
+    else
+        echo "Invalid option. Please use 'y' or 'n'."
+        exit 1
     fi
 else
     echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
