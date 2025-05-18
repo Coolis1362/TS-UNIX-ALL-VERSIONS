@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 
 def ts_unix_prompt():
     user = os.environ.get("USER", "ts-unix")  # Safer way to get username
@@ -20,6 +21,7 @@ while True:
     elif command.lower() == "remove":
        print("Goodbye! You have removed the TS-UNIX system.")
        os.system("sudo apt remove ts-unix")
+       sys.exit(0)  # Exit the script after removal
     else:
      os.system(command)  # Execute command
 
