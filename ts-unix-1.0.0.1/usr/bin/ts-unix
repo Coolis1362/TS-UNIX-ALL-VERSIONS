@@ -54,6 +54,10 @@ elif [[ "$1" == "--remove" ]]; then
         echo "Invalid option. Please use 'y' or 'n'."
         exit 1
     fi
+elif [[ "$1" == "--update" ]]; then
+    echo "Updating TS-UNIX..."
+    sudo apt upgrade ts-unix
+    echo "TS-UNIX updated successfully!"
 else
     echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
     exit 1
