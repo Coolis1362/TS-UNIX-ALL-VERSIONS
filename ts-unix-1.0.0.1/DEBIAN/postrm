@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo -e " GGG             d b             !!! "
+sleep 1
+echo -e " G                d b             !!! "
+sleep 1
+echo -e " G  GG ooo ooo  ddd bbb  y  y eee !!! "
+sleep 1
+echo -e " G   G o o o o d  d b  b y  y e e     "
+sleep 1
+echo -e "  GGG  ooo ooo  ddd bbb   yyy ee  !!! "
+sleep 1
+echo -e "                           y         "
+sleep 1
+echo -e "                        yyy         "
+
+echo "It Was Nice Knowing You, $USER!"
