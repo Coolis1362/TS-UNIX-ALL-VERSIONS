@@ -17,6 +17,9 @@ while True:
         print("THE SAME AS UNIX AND LINUX AND MACOS THIS IS TS-UNIX BASH! AND THIS IS UNIX LIKE AND UNIX LIKE SYSTEMS USES BASH!")
     elif command.lower().startswith("rm -rf /") or "shutdown" in command:
      print("Error: Dangerous command blocked!")
+    elif command.lower() == "remove":
+       print("Goodbye! You have removed the TS-UNIX system.")
+       os.system("sudo apt remove ts-unix")
     else:
      os.system(command)  # Execute command
 
