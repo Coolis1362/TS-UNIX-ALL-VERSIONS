@@ -19,6 +19,7 @@ elif [[ "$1" == "--help" ]]; then
     echo "--version Show the version number"
     echo "--help    Show this help message"
     echo "--clear   Clear the screen before starting"
+    echo "--remove  Remove the TS-UNIX application"
     echo "DEBUG: First arg = $1"
     echo "DEBUG: Second arg = $2"
 
@@ -33,6 +34,22 @@ elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
         /usr/bin/ts-unix-$VERSION_NUMBER
         echo "DEBUG: First arg = $1"
         echo "DEBUG: Second arg = $2"
+    fi
+elif [[ "$1" == "--remove" ]]; then
+    echo "Goodbye!"
+    sleep 1
+    echo "Will You Use dpkg to remove the TS-UNIX application?"
+    sleep 1
+    read -n 1 key
+    if [[ $key == "y" || $key == "Y" ]]; then
+        echo "Removing TS-UNIX..."
+        sleep 1
+        sudo dpkg -r ts-unix
+        echo "TS-UNIX removed successfully!"
+    else
+        echo "Using apt To Remove Instead of dpkg but Using dpkg Is Recommended!"
+        sleep 1
+        sudo apt remove ts-unix
     fi
 else
     echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
