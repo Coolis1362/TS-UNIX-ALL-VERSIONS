@@ -43,4 +43,4 @@ echo "The TS-UNIX executable is located at /usr/bin/ts-unix-$VERSION_NUMBER"
 sleep 1
 echo "TS-UNIX Will Now Start!"
 sleep 1
-/usr/bin/ts-unix --start
+ts-unix --start
