@@ -28,10 +28,9 @@ elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
         exit 1
     else
         echo "Starting TS-UNIX $VERSION_NUMBER with a clean screen!"
-        clear
+        clear && /usr/bin/ts-unix-$VERSION_NUMBER
         echo "DEBUG: First arg = $1"
         echo "DEBUG: Second arg = $2"
-        /usr/bin/ts-unix-$VERSION_NUMBER
     fi
 else
     echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
