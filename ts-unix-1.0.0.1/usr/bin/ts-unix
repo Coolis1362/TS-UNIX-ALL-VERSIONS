@@ -17,7 +17,7 @@ elif [[ "$1" == "--help" ]]; then
     echo "--version Show the version number"
     echo "--help    Show this help message"
     echo "--clear   Clear the screen before starting"
-elif [[ "$1" == "--start" ]] && [[ "$2" == " --clear" ]]; then
+elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
     if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
         echo "Error: TS-UNIX executable not found!"
         exit 1
