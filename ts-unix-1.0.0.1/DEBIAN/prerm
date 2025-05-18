@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+# Stop services before removal
+systemctl stop ts-unix || true
+systemctl stop ts-unix-1.0.0.2 || true
+
+exit 0
