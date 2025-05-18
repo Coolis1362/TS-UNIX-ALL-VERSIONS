@@ -37,3 +37,5 @@ sudo apt upgrade ts-unix
 ```
 
 It Will Check For Updates For the ts-unix package and install them if available. (And Updates For Other Installed Packages If Any)
+
+Get The Latest Version Of The Package From [Here](https://github.com/Coolis1362/TS-UNIX-ALL-VERSIONS/releases)
