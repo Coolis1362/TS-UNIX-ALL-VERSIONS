@@ -22,8 +22,8 @@ elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
         echo "Error: TS-UNIX executable not found!"
         exit 1
     else
-        clear
         echo "Starting TS-UNIX $VERSION_NUMBER with a clean screen!"
+        clear
         /usr/bin/ts-unix-$VERSION_NUMBER
     fi
 else
