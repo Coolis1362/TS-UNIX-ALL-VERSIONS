@@ -1,13 +1,28 @@
-echo "TS-UNIX INSTALLATION COMPLETE!"
-echo "Welcome to the TS-UNIX CLI!"
-echo ""
-echo "  ████████╗███████╗     ██╗   ██╗███╗   ██╗██╗██╗  ██╗  "
-echo "  ╚══██╔══╝██╔════╝     ██║   ██║████╗  ██║██║╚██╗██╔╝  "
-echo "     ██║   █████╗       ██║   ██║██╔██╗ ██║██║ ╚███╔╝   "
-echo "     ██║   ██╔══╝       ██║   ██║██║╚██╗██║██║ ██╔██╗   "
-echo "     ██║   ███████╗     ╚██████╔╝██║ ╚████║██║██╔╝ ██╗  "
-echo "     ╚═╝   ╚══════╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝  "
-echo ""
-echo "TS-UNIX is ready to roll!"
-echo "Now TS-UNIX Will Start"
-/usr/bin/ts-unix --start 
+#!/bin/bash
+
+VERSION_NUMBER="1.0.0.1"
+
+echo "Installation of TS-UNIX $VERSION_NUMBER is complete!"
+
+echo -e "\n"
+echo -e "TTTTTT  SSS      U   U N   N III X   X"
+echo -e "  TT   S         U   U NN  N  I   X X"
+echo -e "  TT    SSS  --- U   U N N N  I    X"
+echo -e "  TT       S     U   U N  NN  I   X X"
+echo -e "  TT   SSSS       UUU  N   N III X   X"
+echo -e "\n"
+
+echo "TS-UNIX is a simple UNIX-like command line interface for All OSes. It is designed to be easy to use and understand, making it a great choice for beginners and experienced users alike."
+
+echo "To start TS-UNIX, run the following command:"
+echo "ts-unix --start"
+echo "You can also use the --version option to check the version number:"
+echo "ts-unix --version"
+echo "For help, use the --help option:"
+echo "ts-unix --help"
+echo "To clear the screen before starting, use the --clear option:"
+echo "ts-unix --start --clear"
+echo "WARNING: The --start --clear May Not Work Properly in this version. Please use the 'clear' option first, then run the command again."
+echo "The TS-UNIX executable is located at /usr/bin/ts-unix-$VERSION_NUMBER"
+echo "TS-UNIX Will Now Start!"
+/usr/bin/ts-unix --start
