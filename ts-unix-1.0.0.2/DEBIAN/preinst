@@ -12,6 +12,6 @@ for version in $PAST_VERSION_NUMBERS; do
 done
 
 # Ensure required dependencies are installed (optional)
-apt-get install -y bash coreutils || true
+sudo apt-get install -y bash coreutils || true
 
 exit 0
