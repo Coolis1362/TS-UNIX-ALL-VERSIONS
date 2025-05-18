@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
+import time
 
 def ts_unix_prompt():
     user = os.environ.get("USER", "ts-unix")  # Safer way to get username
@@ -8,15 +9,19 @@ def ts_unix_prompt():
     return f"{user}@TS-UNIX:{cwd}$ "  # Custom TS-UNIX prompt
 
 
-
+time.sleep(1)
 print("TTTTTT  SSS      U   U N   N III X   X      11      000      000      22  ")
+time.sleep(1)
 print("  TT   S         U   U NN  N  I   X X      111     0  00    0  00    2  2 ")
+time.sleep(1)
 print("  TT    SSS  --- U   U N N N  I    X        11     0 0 0    0 0 0      2  ")
+time.sleep(1)
 print("  TT       S     U   U N  NN  I   X X       11  .. 00  0 .. 00  0 ..  2   ")
+time.sleep(1)
 print("  TT   SSSS       UUU  N   N III X   X     11l1 ..  000  ..  000  .. 2222 ")
-print("")
+time.sleep(1)
 print("Non-ASCII art If Can't Read ASCII Art: TS-UNIX 1.0.0.2")
-print("")
+time.sleep(1)
 print("Coolis1362 And Tadeosoft Copyright (C) 2025 All Rights Reserved")
 while True:
     command = input(ts_unix_prompt())  # Show prompt and get input
