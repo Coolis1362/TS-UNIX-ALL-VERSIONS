@@ -6,6 +6,7 @@ def ts_unix_prompt():
     cwd = os.getcwd()  # Get current directory
     return f"{user}@TS-UNIX:{cwd}$ "  # Custom TS-UNIX prompt
 
+print("Coolis1362 And Tadeosoft Copyright (C) 2025 All Rights Reserved")
 while True:
     command = input(ts_unix_prompt())  # Show prompt and get input
     if command.lower() in ["exit", "quit"]:
