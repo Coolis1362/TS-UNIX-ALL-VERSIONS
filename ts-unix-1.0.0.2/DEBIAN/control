@@ -1,6 +1,6 @@
 Package: ts-unix
-Version: 1.0.0.1
-Architecture: amd64 i386 armhf arm64 riscv64 mips mips64 ppc64 ppc64le sparc all
+Version: 1.0.0.2
+Architecture: all
 Maintainer: Coolis1362 On GitHub <tadeotherocketbuilder@outlook.com> 
 Description: TS-UNIX Is A UNIX Like OS. All Rights Reserved
 Pre-Depends: dpkg (>= 1.0), apt (>= 0.1.0)
