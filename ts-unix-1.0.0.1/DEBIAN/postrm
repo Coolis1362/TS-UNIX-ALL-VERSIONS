@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e " GGG             d b             !!! "
+echo -e " GGG             d b              !!! "
 sleep 1
 echo -e " G                d b             !!! "
 sleep 1
