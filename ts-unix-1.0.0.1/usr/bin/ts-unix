@@ -6,6 +6,8 @@ if [[ "$1" == "--start" ]]; then
         echo "Error: TS-UNIX executable not found!"
         exit 1
     else
+        echo "DEBUG: First arg = $1"
+        echo "DEBUG: Second arg = $2"
         echo "Starting TS-UNIX $VERSION_NUMBER..."
         /usr/bin/ts-unix-$VERSION_NUMBER
     fi
@@ -17,6 +19,9 @@ elif [[ "$1" == "--help" ]]; then
     echo "--version Show the version number"
     echo "--help    Show this help message"
     echo "--clear   Clear the screen before starting"
+    echo "DEBUG: First arg = $1"
+    echo "DEBUG: Second arg = $2"
+
 elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
     if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
         echo "Error: TS-UNIX executable not found!"
@@ -24,6 +29,8 @@ elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
     else
         echo "Starting TS-UNIX $VERSION_NUMBER with a clean screen!"
         clear
+        echo "DEBUG: First arg = $1"
+        echo "DEBUG: Second arg = $2"
         /usr/bin/ts-unix-$VERSION_NUMBER
     fi
 else
