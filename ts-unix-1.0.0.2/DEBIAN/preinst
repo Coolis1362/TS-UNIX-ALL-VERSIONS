@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+PAST_VERSION_NUMBERS="1.0.0 1.0.0.1"
+
+echo "Preparing TS-UNIX installation..."
+
+# Stop any running old versions before installing
+systemctl stop ts-unix || true
+for version in $PAST_VERSION_NUMBERS; do
+    systemctl stop ts-unix-$version || true
+done
+
+# Ensure required dependencies are installed (optional)
+apt-get install -y bash coreutils || true
+
+exit 0
