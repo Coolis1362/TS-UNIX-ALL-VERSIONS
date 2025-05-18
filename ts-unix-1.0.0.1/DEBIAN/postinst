@@ -3,26 +3,44 @@
 VERSION_NUMBER="1.0.0.1"
 
 echo "Installation of TS-UNIX $VERSION_NUMBER is complete!"
-
+sleep 1
 echo -e "\n"
+sleep 1
 echo -e "TTTTTT  SSS      U   U N   N III X   X"
+sleep 1
 echo -e "  TT   S         U   U NN  N  I   X X"
+sleep 1
 echo -e "  TT    SSS  --- U   U N N N  I    X"
+sleep 1
 echo -e "  TT       S     U   U N  NN  I   X X"
+sleep 1
 echo -e "  TT   SSSS       UUU  N   N III X   X"
+sleep 1
 echo -e "\n"
+sleep 1
 
 echo "TS-UNIX is a simple UNIX-like command line interface for All OSes. It is designed to be easy to use and understand, making it a great choice for beginners and experienced users alike."
-
+sleep 1
 echo "To start TS-UNIX, run the following command:"
+sleep 1
 echo "ts-unix --start"
+sleep 1
 echo "You can also use the --version option to check the version number:"
+sleep 1
 echo "ts-unix --version"
+sleep 1
 echo "For help, use the --help option:"
+sleep 1
 echo "ts-unix --help"
+sleep 1
 echo "To clear the screen before starting, use the --clear option:"
+sleep 1
 echo "ts-unix --start --clear"
+sleep 1
 echo "WARNING: The --start --clear May Not Work Properly in this version. Please use the 'clear' option first, then run the command again."
+sleep 1
 echo "The TS-UNIX executable is located at /usr/bin/ts-unix-$VERSION_NUMBER"
+sleep 1
 echo "TS-UNIX Will Now Start!"
+sleep 1
 /usr/bin/ts-unix --start
