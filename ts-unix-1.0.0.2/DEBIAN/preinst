@@ -3,7 +3,7 @@ set -e
 
 PAST_VERSION_NUMBERS="1.0.0 1.0.0.1 1.0.0.2"
 
-echo "Stopping TS-UNIX services before removal..."
+echo "Checking for running TS-UNIX services before removal..."
 
 for version in $PAST_VERSION_NUMBERS; do
     if systemctl list-units --type=service --no-pager | grep -q "ts-unix-$version"; then
