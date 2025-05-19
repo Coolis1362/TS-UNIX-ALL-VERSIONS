@@ -15,5 +15,6 @@ sleep 1
 echo -e "                        yyy         "
 
 echo "It Was Nice Knowing You, $USER!"
+sleep 1
 echo "If You Are Upgrading, You Don't Need to Read All Of This!"
 sleep 1
