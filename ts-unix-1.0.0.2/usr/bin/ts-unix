@@ -20,6 +20,7 @@ elif [[ "$1" == "--help" ]]; then
     echo "--help    Show this help message"
     echo "--clear   Clear the screen before starting"
     echo "--remove  Remove the TS-UNIX application"
+    echo "--update  Update the TS-UNIX application"
     echo "DEBUG: First arg = $1"
     echo "DEBUG: Second arg = $2"
 
