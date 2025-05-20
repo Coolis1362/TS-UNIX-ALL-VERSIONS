@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION_NUMBER="1.0.0.2"
+VERSION_NUMBER="1.0.0.3"
 
 echo "Installation of TS-UNIX $VERSION_NUMBER is complete!"
 sleep 1

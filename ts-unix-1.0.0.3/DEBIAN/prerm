@@ -1,8 +1,10 @@
 #!/bin/sh
 set -e
 
+VERSION_NUMBER="1..0.0.3"
+
 # Stop services before removal
 systemctl stop ts-unix || true
-systemctl stop ts-unix-1.0.0.2 || true
+systemctl stop ts-unix-$VERSION_NUMBER || true
 
 exit 0

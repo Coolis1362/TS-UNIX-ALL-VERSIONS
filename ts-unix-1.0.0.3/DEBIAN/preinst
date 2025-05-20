@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-PAST_VERSION_NUMBERS="1.0.0 1.0.0.1 1.0.0.2"
+PAST_VERSION_NUMBERS="1.0.0 1.0.0.1 1.0.0.2 1.0.0.3"
 
 echo "Checking for running TS-UNIX services before removal..."
 
