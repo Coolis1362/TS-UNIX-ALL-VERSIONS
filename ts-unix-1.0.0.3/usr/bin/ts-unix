@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION_NUMBER="1.0.0.2"
+VERSION_NUMBER="1.0.0.3"
 FEATURES_VERSION_NUMBER="0.0.0 (Not Available Yet)"
 
 if [[ "$1" == "--start" ]]; then
@@ -22,6 +22,9 @@ elif [[ "$1" == "--help" ]]; then
     echo "--clear   Clear the screen before starting"
     echo "--remove  Remove the TS-UNIX application"
     echo "--update  Update the TS-UNIX application"
+    echo "--reboot  Reboot the TS-UNIX application"
+    echo "--stop    Stop the TS-UNIX application"
+    echo "--features Show TS-UNIX features"
     echo "DEBUG: First arg = $1"
     echo "DEBUG: Second arg = $2"
 
