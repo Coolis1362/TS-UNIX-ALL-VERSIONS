@@ -83,6 +83,7 @@ elif [[ "$1" == "--features "]]; then
     echo "Here You Can Add Extensions To TS-UNIX!"
     echo "INFO: 3RD PARTY ESTENSIONS ARE NOT PRESENTED ONLY 1ST PARTY EXTENSIONS ARE PRESENTED!"
     echo "INFO: TO TURN 3RD PARTY EXTENSIONS TO 1ST PARTY ECTENSIONS PLEASE GO TO https://github.com/Coolis1362/TS-UNIX-ALL-VERSIONS/discussions"
+    echo "INFO: 1ST PARTY EXTENSIONS WILL BE ADDED SOON!"
 else
     echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
     exit 1
