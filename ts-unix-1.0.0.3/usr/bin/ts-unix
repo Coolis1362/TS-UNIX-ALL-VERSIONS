@@ -12,10 +12,12 @@ if [[ "$1" == "--start" ]]; then
         echo "Starting TS-UNIX $VERSION_NUMBER..."
         /usr/bin/ts-unix-$VERSION_NUMBER
     fi
+
 elif [[ "$1" == "--version" ]]; then
     echo "TS-UNIX version $VERSION_NUMBER"
+
 elif [[ "$1" == "--help" ]]; then
-    echo "Usage: ts-unix [--start | --version | --help]"
+    echo "Usage: ts-unix [--start | --version | --help | --clear | --remove | --update | --reboot | --stop | --features]"
     echo "--start   Start the TS-UNIX application"
     echo "--version Show the version number"
     echo "--help    Show this help message"
@@ -25,27 +27,21 @@ elif [[ "$1" == "--help" ]]; then
     echo "--reboot  Reboot the TS-UNIX application"
     echo "--stop    Stop the TS-UNIX application"
     echo "--features Show TS-UNIX features"
-    echo "DEBUG: First arg = $1"
-    echo "DEBUG: Second arg = $2"
 
 elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
-    clear  # Clear screen FIRST before anything else!
-
+    clear  # Clear screen first before anything else!
     if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
         echo "Error: TS-UNIX executable not found!"
         exit 1
     else
         echo "Starting TS-UNIX $VERSION_NUMBER with a clean screen!"
         /usr/bin/ts-unix-$VERSION_NUMBER
-        echo "DEBUG: First arg = $1"
-        echo "DEBUG: Second arg = $2"
     fi
+
 elif [[ "$1" == "--remove" ]]; then
-    echo "DEBUG: First arg = $1"
-    echo "DEBUG: Second arg = $2"
     echo "Goodbye!"
     sleep 1
-    echo "Will You Use dpkg to remove the TS-UNIX application?"
+    echo "Will you use dpkg to remove TS-UNIX? (y/n)"
     sleep 1
     read -n 1 key
     if [[ $key == "y" || $key == "Y" ]]; then
@@ -54,40 +50,39 @@ elif [[ "$1" == "--remove" ]]; then
         sudo dpkg -r ts-unix
         echo "TS-UNIX removed successfully!"
     elif [[ $key == "n" || $key == "N" ]]; then
-        echo "Using apt To Remove Instead of dpkg but Using dpkg Is Recommended!"
+        echo "Using apt to remove TS-UNIX instead (dpkg is recommended)."
         sleep 1
         sudo apt remove ts-unix
     else
         echo "Invalid option. Please use 'y' or 'n'."
         exit 1
     fi
+
 elif [[ "$1" == "--update" ]]; then
-    echo "DEBUG: First arg = $1"
-    echo "DEBUG: Second arg = $2"
-    echo "Updating TS-UNIX..."
+    echo "Checking for TS-UNIX updates..."
+    sudo apt list --upgradable | grep ts-unix
     sudo apt upgrade ts-unix
     echo "TS-UNIX updated successfully!"
+
 elif [[ "$1" == "--reboot" ]]; then
-    echo "DEBUG: First arg = $1"
-    echo "DEBUG: Second arg = $2"
     echo "Rebooting TS-UNIX..."
-    /usr/bin/ts-unix-stop
-    /usr/bin/ts-unix-$VERSION_NUMBER
+    pkill -f ts-unix-$VERSION_NUMBER  # Ensure the process stops cleanly
+    /usr/bin/ts-unix-$VERSION_NUMBER  # Restart the service
     echo "TS-UNIX rebooted successfully!"
+
 elif [[ "$1" == "--stop" ]]; then
-    echo "DEBUG: First arg = $1"
-    echo "DEBUG: Second arg = $2"
     echo "Stopping TS-UNIX..."
-    /usr/bin/ts-unix-stop
-elif [[ "$1" == "--features "]]; then
-    echo "DEBUG: First arg = $1"
-    echo "DEBUG: Second arg = $2"
-    echo "Welcome To TS-UNIX Features $FEATURES_VERSION_NUMBER!"
-    echo "Here You Can Add Extensions To TS-UNIX!"
-    echo "INFO: 3RD PARTY ESTENSIONS ARE NOT PRESENTED ONLY 1ST PARTY EXTENSIONS ARE PRESENTED!"
-    echo "INFO: TO TURN 3RD PARTY EXTENSIONS TO 1ST PARTY ECTENSIONS PLEASE GO TO https://github.com/Coolis1362/TS-UNIX-ALL-VERSIONS/discussions"
-    echo "INFO: 1ST PARTY EXTENSIONS WILL BE ADDED SOON!"
+    pkill -f ts-unix-$VERSION_NUMBER
+
+elif [[ "$1" == "--features" ]]; then
+    echo "Welcome to TS-UNIX Features $FEATURES_VERSION_NUMBER!"
+    echo "Here you can add extensions to TS-UNIX!"
+    echo "INFO: 3rd-party extensions are not presented—only 1st-party extensions are shown."
+    echo "INFO: To convert 3rd-party extensions into official ones, visit:"
+    echo "https://github.com/Coolis1362/TS-UNIX-ALL-VERSIONS/discussions"
+    echo "INFO: 1st-party extensions will be added soon!"
+
 else
-    echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
+    echo "The Official ts-unix Bash Script Version $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
     exit 1
 fi
