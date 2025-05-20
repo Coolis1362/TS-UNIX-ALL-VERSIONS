@@ -20,7 +20,7 @@ print("  TT       S     U   U N  NN  I   X X       11  .. 00  0 .. 00  0 ..    3
 time.sleep(1)
 print("  TT   SSSS       UUU  N   N III X   X     11l1 ..  000  ..  000  .. 333  ")
 time.sleep(1)
-print("Non-ASCII art If Can't Read ASCII Art: TS-UNIX 1.0.0.2")
+print("Non-ASCII art If Can't Read ASCII Art: TS-UNIX 1.0.0.3")
 time.sleep(1)
 print("Coolis1362 And Tadeosoft Copyright (C) 2025 All Rights Reserved")
 while True:
@@ -28,7 +28,7 @@ while True:
     if command.lower() in ["exit", "quit"]:
         break
     elif command.lower() == "ts-unix-version":
-        print("TS-UNIX version 1.0.0.2")
+        print("TS-UNIX version 1.0.0.3")
     elif command.lower() == "help":
         print("THE SAME AS UNIX AND LINUX AND MACOS THIS IS TS-UNIX BASH! AND THIS IS UNIX LIKE AND UNIX LIKE SYSTEMS USES BASH!")
     elif command.lower().startswith("rm -rf /") or "shutdown" in command:
