@@ -36,6 +36,8 @@ while True:
     elif command.lower() == "remove":
        print("Goodbye! You have removed the TS-UNIX system.")
        os.system("sudo apt remove ts-unix")
+    elif command.lower() == "features":
+       os.system("/usr/bin/ts-unix --features")  # Execute features command
     else:
      os.system(command)  # Execute command
 
