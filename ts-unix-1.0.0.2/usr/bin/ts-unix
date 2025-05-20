@@ -1,5 +1,6 @@
 #!/bin/bash
 VERSION_NUMBER="1.0.0.2"
+FEATURES_VERSION_NUMBER="0.0.0 (Not Available Yet)"
 
 if [[ "$1" == "--start" ]]; then
     if [[ ! -x /usr/bin/ts-unix-$VERSION_NUMBER ]]; then
@@ -37,6 +38,8 @@ elif [[ "$1" == "--start" ]] && [[ "$2" == "--clear" ]]; then
         echo "DEBUG: Second arg = $2"
     fi
 elif [[ "$1" == "--remove" ]]; then
+    echo "DEBUG: First arg = $1"
+    echo "DEBUG: Second arg = $2"
     echo "Goodbye!"
     sleep 1
     echo "Will You Use dpkg to remove the TS-UNIX application?"
@@ -56,9 +59,30 @@ elif [[ "$1" == "--remove" ]]; then
         exit 1
     fi
 elif [[ "$1" == "--update" ]]; then
+    echo "DEBUG: First arg = $1"
+    echo "DEBUG: Second arg = $2"
     echo "Updating TS-UNIX..."
     sudo apt upgrade ts-unix
     echo "TS-UNIX updated successfully!"
+elif [[ "$1" == "--reboot" ]]; then
+    echo "DEBUG: First arg = $1"
+    echo "DEBUG: Second arg = $2"
+    echo "Rebooting TS-UNIX..."
+    /usr/bin/ts-unix-stop
+    /usr/bin/ts-unix-$VERSION_NUMBER
+    echo "TS-UNIX rebooted successfully!"
+elif [[ "$1" == "--stop" ]]; then
+    echo "DEBUG: First arg = $1"
+    echo "DEBUG: Second arg = $2"
+    echo "Stopping TS-UNIX..."
+    /usr/bin/ts-unix-stop
+elif [[ "$1" == "--features "]]; then
+    echo "DEBUG: First arg = $1"
+    echo "DEBUG: Second arg = $2"
+    echo "Welcome To TS-UNIX Features $FEATURES_VERSION_NUMBER!"
+    echo "Here You Can Add Extensions To TS-UNIX!"
+    echo "INFO: 3RD PARTY ESTENSIONS ARE NOT PRESENTED ONLY 1ST PARTY EXTENSIONS ARE PRESENTED!"
+    echo "INFO: TO TURN 3RD PARTY EXTENSIONS TO 1ST PARTY ECTENSIONS PLEASE GO TO https://github.com/Coolis1362/TS-UNIX-ALL-VERSIONS/discussions"
 else
     echo "The Official ts-unix Bash Script VERSION $VERSION_NUMBER. Invalid option. Type ts-unix --help for usage."
     exit 1

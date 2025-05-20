@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Stopping TS-UNIX 1.0.0.3..."
+pkill -SIGTERM -f ts-unix-1.0.0.3
+echo "TS-UNIX has been stopped successfully."
