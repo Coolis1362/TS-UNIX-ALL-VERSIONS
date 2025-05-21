@@ -51,6 +51,20 @@ echo "ts-unix --update"
 sleep 1
 echo "WARNING: The --update option may not work properly in this version. Please use The 'sudo dpkg -i' command to update the application."
 sleep 1
-echo "TS-UNIX Will Now Start! WARNING: The User When You Enter TS-UNIX For The First Time Will Be root. If you Want To Chage User From root To Your User, Type 'exit' and Type in 'ts-unix --start'"
+echo "To reboot TS-UNIX, use the --reboot option:"
+sleep 1
+echo "ts-unix --reboot"
+sleep 1
+echo "to stop TS-UNIX, use the --stop option:"
+sleep 1
+echo "ts-unix --stop"
+sleep 1
+echo "To see The Extensions of TS-UNIX, use the --features option:"
+sleep 1
+echo "ts-unix --features"
+sleep 1
+echo "WARNING: The TS-UNIX Extensions Are Not Available Yet. Theese Extensiosn Might Be In Furture Versions."
+sleep 1
+echo "TS-UNIX Will Now Start! WARNING: The User When You Enter TS-UNIX For The First Time, The User Will Be root. If you Want To Chage User From root To Your User, Type 'exit' and Type in 'ts-unix --start'"
 sleep 1
 ts-unix --start
