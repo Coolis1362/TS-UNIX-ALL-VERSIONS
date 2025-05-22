@@ -4,7 +4,7 @@ set -e
 VERSION_NUMBER="1.0.0.3"
 
 # Stop services before removal
-systemctl stop ts-unix || true
-systemctl stop ts-unix-$VERSION_NUMBER || true
+systemctl stop /usr/bin/ts-unix || true
+systemctl stop /usr/bin/ts-unix-$VERSION_NUMBER || true
 
 exit 0
