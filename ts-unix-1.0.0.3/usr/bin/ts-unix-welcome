@@ -6,3 +6,14 @@ echo "W     W     l                    !!! "
 echo "W  W  W eee l  ccc ooo mmmm  eee !!! "
 echo " W W W  e e l c    o o m m m e e     "
 echo "  W W   ee  l  ccc ooo m m m ee  !!! "
+
+echo "Here Is A Tutorial For You How to Use TS-UNIX"
+echo "WARNING: THIS PRODUCT AND SCRIPT IS LICENSED UNDER THE COPYRIGHT (ALL RIGHTS RESERVED) LICENSE"
+sleep 1
+echo "This Is The Prompt You Will See When You Start TS-UNIX"
+
+echo "username@TS-UNIX:current_directory$"
+sleep 1
+echo "This Have Bash Commands, But Under The Hood, It Has It's Own Shell Named 'TS-UNIX Bash' Which Have Bash Commands With 'ts-unix-version', 'remove', and 'features' Commands"
+sleep 1
+echo "YOU WILL ONLY SEE THIS WHILE IN LINUX SO YOU KNOW WHAT ARE THE BASH COMMANDS ARE"
