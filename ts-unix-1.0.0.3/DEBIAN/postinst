@@ -65,6 +65,10 @@ echo "ts-unix --features"
 sleep 1
 echo "WARNING: The TS-UNIX Extensions Are Not Available Yet. Theese Extensiosn Might Be In Furture Versions."
 sleep 1
+echo "To start the TS-UNIX tutorial, use the --start-tutorial option:"
+sleep 1
+echo "ts-unix --start-tutorial"
+sleep 1
 echo "TS-UNIX Will Now Start! WARNING: The User When You Enter TS-UNIX For The First Time, The User Will Be root. If you Want To Chage User From root To Your User, Type 'exit' and Type in 'ts-unix --start'"
 sleep 1
 ts-unix --start
