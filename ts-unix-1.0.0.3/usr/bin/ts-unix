@@ -27,6 +27,7 @@ elif [[ "$1" == "--help" ]]; then
     echo "--reboot  Reboot the TS-UNIX application"
     echo "--stop    Stop the TS-UNIX application"
     echo "--features Show TS-UNIX features"
+    echo "--start-tutorial Start the TS-UNIX tutorial"
 
 elif [[ "$1" == "--start" ]] || [[ "$2" == "--clear" ]]; then
     clear  # Clear screen first before anything else!
