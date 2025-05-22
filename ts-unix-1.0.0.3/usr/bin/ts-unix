@@ -82,7 +82,7 @@ elif [[ "$1" == "--features" ]]; then
     echo "INFO: To convert 3rd-party extensions into official ones, visit:"
     echo "https://github.com/Coolis1362/TS-UNIX-ALL-VERSIONS/discussions"
     echo "INFO: 1st-party extensions will be added soon!"
-elif [[ "$1" == "--start-tutorial"]]; then
+elif [[ "$1" == "--start-tutorial" ]]; then
     echo "Starting TS-UNIX tutorial..."
     /usr/bin/ts-unix-welcome
 else
